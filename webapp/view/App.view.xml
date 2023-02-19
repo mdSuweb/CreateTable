@@ -1,0 +1,80 @@
+<mvc:View
+    controllerName="sap.ui.demo.walkthrough.controller.App"
+    xmlns:m="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.ui.table">
+
+
+    <m:App id="app">
+        <m:pages>
+            <m:Page id="page" title="{i18n>title}">
+                <m:content>
+
+                    <Table id="table"
+                        rows="{invoice>/Invoices}"
+                        selectionMode="None">
+
+                        <!-- <extension>
+                           <m:OverflowToolbar style="Clear">
+                            <m:Title id="title" text="{i18n>textHedwer}" />
+                             <m:ToolbarSpacer />
+                           <m:Button id="OrderList_new_button" 
+                           icon="sap-icon://add" 
+                           text="{i18n>New}" 
+                           type="Accept"  />
+                       </m:OverflowToolbar>
+                   </extension> -->
+
+                        <columns>
+                            <Column>
+                                <m:Label text="{i18n>id}" />
+                                <template>
+                                    <m:Text text="New" />
+                                </template>
+                            </Column>
+                            <Column>
+                                <m:Label text="{i18n>Customer}" />
+                                <template>
+                                    <m:Text text="{invoice>name}" wrapping="false" />
+                                </template>
+                            </Column>
+                            <Column>
+                                <m:Label text="{i18n>address}" />
+                                <template>
+                                    <m:Text text="{invoice>Adress}" wrapping="false" />
+                                </template>
+                            </Column>
+                            <Column>
+                                <m:Label text="{i18n>orderDate}" />
+                                <template>
+                                    <m:Text text="{invoice>city}" wrapping="false" />
+                                </template>
+                            </Column>
+                            <Column>
+                                <m:Label text="{i18n>status}" />
+                                <template>
+                                    <m:Text text="{invoice>Date}" wrapping="false" />
+                                </template>
+                            </Column>
+                            <Column>
+                                <m:Label text="{i18n>action}" />
+                                <template>
+                                    <m:Text text="{invoice>id}" wrapping="false" />
+
+                                </template>
+                            </Column>
+
+                        </columns>
+
+
+                    </Table>
+
+                </m:content>
+
+            </m:Page>
+        </m:pages>
+    </m:App>
+
+
+</mvc:View>
